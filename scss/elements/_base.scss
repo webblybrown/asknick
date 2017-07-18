@@ -20,7 +20,7 @@
 html {
   font-size: 62.5%;
 }
-
+:focus {outline:none;}
 body {
   @include font-size(2);
   background-color: $body-background-color;
@@ -87,4 +87,110 @@ sub {
 
 sup {
   vertical-align: super;
+}
+#hero {
+  text-align: center;
+  position: relative;
+
+  img {
+    margin: auto;   
+  }
+  .arrow {
+    position: absolute;
+    top: 25%;
+    right: 49%;
+  }
+}
+#text-slider {
+  background: #55585a;
+  color: #fff;
+  text-transform: uppercase;
+  border-top: 8px $yellow solid;
+  @include font-size(5);
+  padding: 30px 0px 40px 0px;
+  h1 {
+    line-height: 4rem;
+    font-weight: 800;
+  }
+    span {
+    display: block;
+    @include font-size(4);
+    font-weight: 400;
+  }
+}
+h2 {
+  color: #55585a;
+  text-transform: uppercase;
+   @include font-size(3.5);
+   padding: 40px 0px 20px 0px;
+   line-height: 3.2rem;
+}
+h3 {
+  color: $yellow;
+  text-transform: uppercase;
+   @include font-size(6);
+   padding-bottom: 30px;
+   font-weight: 800;
+}
+.logo {
+  padding-bottom: 25px;
+}
+input {
+  width: 100%;
+  border: 2px solid #55585a;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+textarea {
+  width: 100%;
+  border: 2px solid #55585a;
+  padding: 15px;
+  margin-bottom: 20px;
+  height: 300px;
+}
+input[type="submit"] {
+  background: $yellow;
+  color: #fff;
+  margin-bottom: 50px;
+  border: none;
+  &:hover {
+    background: #55585a;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  form {
+    padding: 0px 10px;
+  }
+  #text-slider  {
+    padding: 10px 5px;
+  h1 {
+    padding: 0px 15px;
+    @include font-size(3.5);
+    line-height: 3.5rem !important;
+    padding: 15px 0px 20px 0px !important;
+  }
+  span {
+    @include font-size(2);
+  }
+    }
+  h2 {
+    @include font-size(2);
+    line-height: 2rem !important;
+  }
+  h3{
+    padding: 0px 15px; 
+   @include font-size(5);
+   font-weight: 800;
+   line-height: 4rem !important;
+   margin-bottom: 40px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 95px !important;
+right: 48% !important;
+    width: 20px !important;
+  }
+
 }
